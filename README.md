@@ -1,2 +1,2 @@
-# Draw-Four
-trading card shop
+# Doingly
+A kanban inspired app to manage workflow 
