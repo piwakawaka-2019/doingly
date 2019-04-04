@@ -1,9 +1,50 @@
+
+$primary: 	#5e0094;
+$secondary: #fccd22;
+$tertiary: #0abab5;
+$quaternary:#ffffff;
+$quinary: #eff5fb;
+
+$theme-colors: (
+
+    "success":$secondary,
+    "dark":$primary,
+    "navbar-dark-color":$primary,
+    "secondary":$secondary
+);
+
+html, body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+  }
+  
+  #main {
+    overflow:auto;
+    padding-bottom:150px; /* this needs to be bigger than footer height*/
+  }
+  
+  .footer {
+    //position: relative;
+    margin-top: -150px; /* negative value of footer height */
+    height: 150px;
+    clear:both;
+    padding-top:20px;
+  } 
+
+  .container-fluid {
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto
+ }
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-$fontColour: rgb(238, 16, 16);
 
-h1 {
-    color: $fontColour;
-    
-}
+
+
+
 
