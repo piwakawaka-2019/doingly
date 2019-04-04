@@ -1,7 +1,7 @@
 
 $primary: 	#5e0094;
 $secondary: #fccd22;
-$tertiary: #0abab5;
+$tertiary: #0abab5; 
 $quaternary:#ffffff;
 $quinary: #eff5fb;
 
@@ -12,6 +12,11 @@ $theme-colors: (
     "navbar-dark-color":$primary,
     "secondary":$secondary
 );
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 
 html, body {
     height: 100%;
@@ -42,49 +47,67 @@ html, body {
 }
 
 .main-wrapper{
-    margin: 20px auto;
-    max-width: 70%;
+    margin: 100px auto;
+    max-width: 80%;
 }
 
 .overview-wrapper{
+    margin-top:50px;
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4, [col] 150px );
-    grid-template-rows: repeat(2, [row] auto );
-    background-color: #fff;
-    color: #444;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-column-gap:4rem;
+    
 }
 
-.task-header{
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
+
+.item {
+    
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+
 }
-.tasks-container{
-    grid-column: col 3 / span 2;
-    grid-row: row 2;
+
+.task-container {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 0.5em;
+    padding:10px;
+    text-align: center;
+    
+
+    
 }
 
-.task{
-    background-color: #444;
-    color: #fff;
+.subitem {
+    background-color: #fdfa4e;
     border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
+    padding-top: 35px;
+
+}
+
+.subitem:hover{
+    background-color: #0abab5;
 }
 
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+.center{
+    margin:auto;
+    
+}
+
+.blue{
+    background-color: #8c8acf8e;
+}
+
+.form-body{
+    margin:50px auto;
+}
+
 
 
 
