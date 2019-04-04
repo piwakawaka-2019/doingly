@@ -1,0 +1,41 @@
+{
+  "name": "boilerplate-knex",
+  "version": "0.1.4",
+  "description": "Express boilerplate with Knex.js",
+  "main": "index.js",
+  "scripts": {
+    "knex": "knex",
+    "dev": "nodemon -e * index",
+    "start": "node index",
+    "test": "jest",
+    "build-css": "node-sass --include-path scss styles/main.scss   public/styles/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-academy-challenges/boilerplate-knex.git"
+  },
+  "author": "EDA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-academy-challenges/boilerplate-knex/issues"
+  },
+  "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "jquery": "^3.3.1",
+    "knex": "^0.16.3",
+    "nodemon": "^1.18.10",
+    "popper.js": "^1.14.7",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "cheerio": "1.0.0-rc.2",
+    "jest": "^24.6",
+    "node-sass": "^4.11.0",
+    "reload": "^2.4.0",
+    "supertest": "^4.0.2"
+  }
+}
