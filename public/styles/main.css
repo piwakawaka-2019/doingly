@@ -22,6 +22,44 @@ html, body {
   margin-right: auto;
   margin-left: auto; }
 
+.main-wrapper {
+  margin: 20px auto;
+  max-width: 70%; }
+
+.overview-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, [col] 150px);
+  grid-template-rows: repeat(2, [row] auto);
+  background-color: #fff;
+  color: #444; }
+
+.task-header {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%; }
+
+.tasks-container {
+  grid-column: col 3 / span 2;
+  grid-row: row 2;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%; }
+
+.task {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%; }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
