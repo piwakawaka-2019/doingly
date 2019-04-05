@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="WTV.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+
+</head>
+<body>
+  
+
+        <div class="box"></div>
+        <div class="text"><a href="">Doingly</a></div>
+    
+   
+<script>
+$(document).ready(function(){
+        $(".box").click(function(){
+            let box = $(this);
+            let txt = $(".text")
+            box.animate({
+                width: "500px",
+            },"slow")
+            box.animate({
+                left: "407px",
+                width: "100px"
+            },"slow")
+            box.animate({
+                height: "500px"
+            },"slow")
+            box.animate({
+                top: "407px",
+                height: "100px",
+            },"slow")
+            box.animate({
+                top: "-50%",
+                left: "-50%",
+                width: "200%",
+                height: "200%",
+                borderRadius: "50%"
+            },"slow")
+            setTimeout(function(){
+                txt.animate({
+                fontSize: "100px"
+                })
+            },3000)
+        })
+    })
+    </script>
+</body>
+
+</html>
