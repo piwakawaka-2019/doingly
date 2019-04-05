@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,49 +7,156 @@
     <link rel="stylesheet" type="text/css" media="screen" href="WTV.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    
+   {{!-- <style>
+       .box{
+           position: absolute;
+           background: #5e0094 ;
+           width:100px ;
+           height:100px ;
+       }
+
+       .text{
+           position: absolute;
+           z-index: 99;
+           font-weight: bold;
+           font-family: 'Yanone Kaffeesatz', sans-serif;
+           font-size: 0px;
+           color: #eee;
+           top:50%;
+           left:50%;
+           transform: translate(-50%,-50%)
+       }
+   </style> --}}
+<style>
+
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    background: #262626;
+    font-family: 'Montserrat', sans-serif;
+
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+}
+#result{
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #eee;
+}
+</style>
+
+   
 
 </head>
 <body>
-  
+  <button id="but">CLICK</button>
+    <div id="result"></div>
 
-        <div class="box"></div>
-        <div class="text"><a href="/home">Doingly</a></div>
-    
-   
-<script>
-$(document).ready(function(){
-        $(".box").click(function(){
-            let box = $(this);
-            let txt = $(".text")
-            box.animate({
-                width: "500px",
-            },"slow")
-            box.animate({
-                left: "407px",
-                width: "100px"
-            },"slow")
-            box.animate({
-                height: "500px"
-            },"slow")
-            box.animate({
-                top: "407px",
-                height: "100px",
-            },"slow")
-            box.animate({
-                top: "-50%",
-                left: "-50%",
-                width: "200%",
-                height: "200%",
-                borderRadius: "50%"
-            },"slow")
-            setTimeout(function(){
-                txt.animate({
-                fontSize: "100px"
-                })
-            },3000)
+
+    <script>
+        $(document).ready(function(){
+    $("#but").click(function(){
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Get"
         })
+        },1000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Things"
+        })
+        },1500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Done"
+        })
+        },2000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Sooner"
+        })
+        },2500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Rather"
+        })
+        },3000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Than"
+        })
+        },3500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Later"
+        })
+        },4000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Introducing"
+        })
+        },4500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "Introducing"
+        })
+        },5000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY"
+        })
+        },5500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY"
+        })
+        },6000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY."
+        })
+        },6500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY."
+        })
+        },7000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY.."
+        })
+        },7500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY.."
+        })
+        },8000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY..."
+        })
+        },8500)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY..."
+        })
+        },9000)
+        setTimeout(function(){
+            $("#result").text(function(){
+            return "DOINGLY...."
+        })
+        },9500)
+        
     })
+  })
     </script>
+
 </body>
 
 </html>
