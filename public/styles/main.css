@@ -7194,3 +7194,29 @@ html, body {
 
 .form-body {
   margin: 50px auto; }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 220px;
+  top: 20px;
+  left: 20px;
+  height: 200px;
+  background: #0abab5;
+  z-index: 10;
+  padding-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #027773; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  background-color: #fcca8e; }
