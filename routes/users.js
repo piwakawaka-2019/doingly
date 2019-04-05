@@ -36,8 +36,9 @@ router.get('/tasks', (req, res) => {
             //       obj[newKey] = x
             //       console.log(obj)
             // })
-            console.log(kanban);
+            console.log('kanban: ', kanban);
             res.render('partials/overview', kanban)
+            console.log('kanban: ', kanban);
             
       })
 
@@ -106,7 +107,46 @@ router.get('/addTask', (req, res) => {
       res.render('partials/addTask');
 })
 router.get('/editTask', (req, res) => {
-      res.render('partials/editTask');
+      db.getTasks().then(x =>{
+          
+            res.render('partials/editTask', {x:x});
+      });
+      
 })
+
+router.post(`/addTask`, async (req, res) => {
+      try{
+      console.log('req.body: ', req.body);
+
+      let userID = req.body.userID;
+
+      let task = {
+            description: req.body.description,
+            status: req.body.status
+      }
+
+      let taskID = await db.makeTask(task);
+      taskID = taskID[0]
+
+      await db.makeAssignment({user_id:userID, task_id:taskID});
+      
+      res.redirect(`/tasks`);
+      }
+      catch(error){
+            console.log(error);
+      }
+})
+ 
+ router.post(`/editTask`, (req, res) => {
+ let task = {
+      id: req.body.taskID,
+      status: req.body.status,
+      description: req.body.description
+
+ }
+ 
+ db.editTask(task)
+ .then(res.redirect(`/tasks`))
+ })
 
 module.exports = router

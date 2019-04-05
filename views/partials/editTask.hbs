@@ -1,10 +1,24 @@
 <div class="center">
     <h1>Edit Task</h1>
-    <form class="form-body" action="/overview" method="POST">
+    <form class="form-body" action="" method="POST">
 
 
-        <label><b>Assign users to task</b></label><br>
-        <select name="user">
+        <label><b>Task Assigned to</b></label><br>
+        <select name="1">
+            <option value="Todo">Ashleigh</option>
+            <option value="Ongoing">Blaine</option>
+            <option value="Done">Cliff</option>
+            <option value="Done">Fudz</option>
+            <option value="Done">Vinnie</option>
+        </select>
+        <br><br>
+        <label><b>Task:</b></label><br>
+        <select name="taskID">
+            {{#each x}}
+                    <option value="{{id}}">{{id}}</option>
+            {{/each}}
+        </select>
+        {{!-- <select name="somename">
             <option value="Backlog"></option>
             <option value="Todo">Ashleigh</option>
             <option value="Ongoing">Blaine</option>
@@ -27,35 +41,23 @@
             <option value="Done">Cliff</option>
             <option value="Done">Fudz</option>
             <option value="Done">Vinnie</option>
-        </select>
-        <select name="somename">
-            <option value="Backlog"></option>
-            <option value="Todo">Ashleigh</option>
-            <option value="Ongoing">Blaine</option>
-            <option value="Done">Cliff</option>
-            <option value="Done">Fudz</option>
-            <option value="Done">Vinnie</option>
-        </select>
-        
-        <br>
-        <br>
-        <label><b>Description:</b></label><br>
-        <textarea rows="4" cols="50">
-
-        </textarea>
-        <br>
-        <br>
-        <label><b>Status:</b></label><br>
-
-        
-        <select name="somename">
+        </select> --}}
+        <br><br>
+         <label><b>Status:</b></label><br>
+        <select name="status">
                     <option value="Backlog">Backlog</option>
-                    <option value="Todo">Todo</option>
+                    <option value="To Do">Todo</option>
                     <option value="Ongoing">Ongoing</option>
                     <option value="Done">Done</option>
         </select>
         <br>
         <br>
+        <label><b>Description:</b></label><br>
+        <textarea name="description" rows="4" cols="50">
+Create routes
+        </textarea>
+        <br>
+
         <input class="btn btn-success my-2 my-sm-0" type="submit" value="Edit Task">
         
 

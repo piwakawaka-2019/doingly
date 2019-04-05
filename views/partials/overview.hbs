@@ -1,5 +1,6 @@
 <h1 class="title">Overview</h1>
 <div class="overview-wrapper">
+    
     <div class="item item1">Backlog</div>
     <div class="item item2">Todo</div>
     <div class="item item1">Doing</div>
@@ -34,7 +35,7 @@
         {{/each}}
     </div>
     <div class="item task-container">
-        {{#each done}}
+        {{#each ongoing}}
             <div class="subitem task dropdown">{{task_id}}
                 <div class="dropdown-content">
                     
@@ -47,8 +48,8 @@
             </div>
         {{/each}}
     </div>
-    <div class="item task-container">
-        {{#each ongoing}}
+        <div class="item task-container">
+        {{#each done}}
             <div class="subitem task dropdown">{{task_id}}
                 <div class="dropdown-content">
                     

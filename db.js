@@ -9,7 +9,17 @@ module.exports = {
   getUsersAssignments : getUsersAssignments,
   getTasksByStatus : getTasksByStatus,
   GetAssignmentByStatus: GetAssignmentByStatus,
+  getTasksByStatus:getTasksByStatus,
+  getUserTasks:getUserTasks,
+  editTask:editTask,
+  makeAssignment:makeAssignment,
+  getTasks: getTasks,
 
+}
+
+
+function getTasks(db = connection){
+  return db('tasks').select()
 }
 
 function getUsers(db = connection){
@@ -23,6 +33,11 @@ function getUser(id, db = connection) {
 function makeTask(task, db = connection){
   return db('tasks').insert(task)
 }
+
+function makeAssignment(assignment, db = connection){
+  return db('assignments').insert(assignment)
+}
+
 
 function getUsersAssignments(id, db = connection){
   return db('users')
@@ -54,3 +69,19 @@ function getTasksByStatus(status){
   return db('tasks').where('status', status)
 }
 
+function editTask(task, db = connection){
+  return db(`tasks`)
+  .where(`tasks.id`, task.id)
+  .update(task)
+}
+
+function getUserTasks(userId, db = connection){
+  return db(`tasks`)
+  .join(`assignments`, `user.id`, `=`, `assignments.users_id`)
+  .where(`assignments.user_id`, userId)
+}
+
+
+function getTasksByStatus(status){
+  return db(`tasks`).where(`status`, status)
+}

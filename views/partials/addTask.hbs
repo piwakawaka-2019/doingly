@@ -1,10 +1,17 @@
 <div class="center">
     <h1>Add a Task</h1>
-    <form class="form-body" action="/overview" method="POST">
+    <form class="form-body" action="/addTask" method="POST">
 
 
         <label><b>Assign users to task</b></label><br>
-        <select name="user">
+        <select name="userID">
+            <option value="1">Ashleigh</option>
+            <option value="2">Blaine</option>
+            <option value="3">Cliff</option>
+            <option value="4">Fudz</option>
+            <option value="5">Vinnie</option>
+        </select>
+        {{!-- <select name="somename">
             <option value="Backlog"></option>
             <option value="Todo">Ashleigh</option>
             <option value="Ongoing">Blaine</option>
@@ -27,30 +34,20 @@
             <option value="Done">Cliff</option>
             <option value="Done">Fudz</option>
             <option value="Done">Vinnie</option>
-        </select>
-        <select name="somename">
-            <option value="Backlog"></option>
-            <option value="Todo">Ashleigh</option>
-            <option value="Ongoing">Blaine</option>
-            <option value="Done">Cliff</option>
-            <option value="Done">Fudz</option>
-            <option value="Done">Vinnie</option>
-        </select>
+        </select> --}}
         
         <br>
         <br>
         <label><b>Description:</b></label><br>
-        <textarea rows="4" cols="50">
+        <textarea name="description" rows="4" cols="50">
 
         </textarea>
         <br>
         <br>
         <label><b>Status:</b></label><br>
-
-        
-        <select name="somename">
+        <select name="status">
                     <option value="Backlog">Backlog</option>
-                    <option value="Todo">Todo</option>
+                    <option value="To Do">Todo</option>
                     <option value="Ongoing">Ongoing</option>
                     <option value="Done">Done</option>
         </select>
@@ -61,3 +58,4 @@
 
     </form>
 </div>
+

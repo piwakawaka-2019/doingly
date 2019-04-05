@@ -3,12 +3,12 @@ exports.seed = function (knex, Promise) {
     .then(function () {
       return knex('tasks').insert([{
           id: 1,
-          description: "Git Push",
+          description: "Create routes to manage super cool pages",
           status: "Backlog"
         },
         {
           id: 2,
-          description: "Site Map",
+          description: "Draw up wire frames for each webpage",
           status: "To Do"
         },
         {
